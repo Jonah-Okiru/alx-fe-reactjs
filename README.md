@@ -34,7 +34,7 @@ This project is designed to introduce you to the essential elements of React, a 
 ### 3. Create Specific Components in a React Application.
 
 ### Create three functional components:
-- Header.jsx: Returns <header><h1>My Favorite Cities h1 header. tag
+- Header.jsx: Returns h1 tag "My Favorite Cities"
 - MainContent.jsx: Returns <main><p>I love to visit New York, Paris,  and Tokyo.</p></main>.
 - Footer.jsx: Returns <footer><p>© 2023 City Lovers</p></footer>.
 - Import the components into App.jsx:
