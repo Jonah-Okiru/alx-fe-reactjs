@@ -24,20 +24,7 @@ This project is designed to introduce you to the essential elements of React, a 
 ### 2. Modify JSX in a Pre-built React Component.
 
 - Create a file named WelcomeMessage.jsx under src/components.
-- Paste the following code into the file:
-- JavaScript
-function WelcomeMessage() {
-  return (
-    <div>
-      <h1>Welcome to ALX React APP!</h1>
-      <p>This is a simple JSX component.</p>
-    </div>
-  );
-}
-
-export default WelcomeMessage;
-
-- Modify the <h1> text to "Hello everyone, I am learning React at ALX!".
+- Modify it's h1 tage text to "Hello everyone, I am learning React at ALX!".
 - Add a new paragraph with the text "I am learning about JSX!".
 - Integrate the component into App.jsx:
 - Import the component: import WelcomeMessage from './WelcomeMessage'
@@ -47,7 +34,7 @@ export default WelcomeMessage;
 ### 3. Create Specific Components in a React Application.
 
 ### Create three functional components:
-- Header.jsx: Returns <header><h1>My Favorite Cities</h1></header>.
+- Header.jsx: Returns <header><h1>My Favorite Cities h1 header. tag
 - MainContent.jsx: Returns <main><p>I love to visit New York, Paris,  and Tokyo.</p></main>.
 - Footer.jsx: Returns <footer><p>© 2023 City Lovers</p></footer>.
 - Import the components into App.jsx:
@@ -55,31 +42,14 @@ export default WelcomeMessage;
 - import MainContent from './MainContent';
 - import Footer from './Footer';
 - Render the components in order within App.jsx's return statement:
-<Header />
-<MainContent />
-<Footer />
 - Run npm run dev and ensure all components are displayed correctly.
-### 4.Create a User Profile Card Using Props (Mandatory)
+
+### 4.Create a User Profile Card Using Props 
 
 - Create a file named UserProfile.jsx under src/components.
 - Define a functional component UserProfile that takes props for name, age, and bio.
-- Use JSX elements (<h2>, <p>) to display user information received through props.
+- Use JSX elements (h2, p) to display user information received through props.
 - Define the props structure in the component.
-#### Example JSX Structure:
-
-###### JavaScript
-const UserProfile = (props) => {
-  return (
-    <div>
-      <h2>{props.name}</h2>
-      <p>Age: {props.age}</p>
-      <p>Bio: {props.bio}</p>
-    </div>
-  );
-};
-##### NB Use code with caution.
-
 - Import UserProfile into App.jsx.
 - Use the component with props, for example:
 - JavaScript
-<UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
