@@ -37,7 +37,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <UserProfile name = "Alice" age = "30" bio = "i love swimming" />
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <Footer />
       
     </>
