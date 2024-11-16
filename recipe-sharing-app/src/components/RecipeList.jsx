@@ -2,7 +2,7 @@
  import useRecipeStore from "./recipeStore";
 
  const RecipeList = () => {
-   const recipes = useRecipeStore(state => state.recipes);
+   const recipes = useRecipeStore(state => state.filteredRecipes());
 
    return (
      <div>
