@@ -26,12 +26,12 @@ const UseForm = () =>{
     
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
-            <input type='text' name='name' value={formData.name} onChange={handleChange} />
+            <label htmlFor="name">username</label>
+            <input type='text' name='name' value={username} onChange={handleChange} />
             <label htmlFor="email">Email</label>
-            <input type='email' name='email' value={formData.email} onChange={handleChange} />
+            <input type='email' name='email' value={email} onChange={handleChange} />
             <label htmlFor="password">Password</label>
-            <input type='number' name = 'password' value={formData.password} onChange={handleChange} />
+            <input type='number' name = 'password' value={password} onChange={handleChange} />
             <button type='submit'>Submit</button>
 
         </form>
