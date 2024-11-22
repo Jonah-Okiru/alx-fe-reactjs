@@ -23,15 +23,26 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
-    if (!formData.username || !formData.email || !formData.password) {
-      setErrors('Kindly fill all fields in the form');
+    // Destructure form fields directly for explicit validation
+    const { username, email, password } = formData;
+
+    // Explicit validation for individual fields
+    if (!username) {
+      setErrors('Username is required');
+      return;
+    }
+    if (!email) {
+      setErrors('Email is required');
+      return;
+    }
+    if (!password) {
+      setErrors('Password is required');
       return;
     }
 
     // Clear errors and log the form data
     setErrors('');
-    console.log('Form submitted successfully:', formData);
+    console.log('Form submitted successfully:', { username, email, password });
 
     // Reset form
     setFormData({
