@@ -1,19 +1,19 @@
 import {useState} from 'react';
 const UseForm = () =>{
     // set variable for form fields
-    const [formData, setFormData] = useState({name:'', email:'', password:''});
+    const [formData, setFormData] = useState({username:'', email:'', password:''});
     const [errors, setErrors] = useState('');
     // handle input change
     const handleChange = (e)=>{
-        const {name, value} = e.target;
-        setFormData(prevState => ({...prevState, [name]:value}));
+        const {username, value} = e.target;
+        setFormData(prevState => ({...prevState, [username]:value}));
     };
     // handle submission
     const handleSubmit = (e) =>{
         e.preventDefault();
         
         // basic validation
-        if( !formData.name || !formData.email || !formData.password){
+        if( !formData.username || !formData.email || !formData.password){
             setErrors("Kindly fill all fileds in the form")
             return;
         }
