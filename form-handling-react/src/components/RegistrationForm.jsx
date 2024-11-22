@@ -13,7 +13,7 @@ const UseForm = () =>{
         e.preventDefault();
         
         // basic validation
-        if( !formData.username || !formData.email || !formData.password){
+        if( !username || !email || !password){
             setErrors("Kindly fill all fileds in the form")
             return;
         }
