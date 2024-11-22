@@ -1,14 +1,22 @@
 import { useState } from 'react';
 
-const UseForm = () => {
-  // Set variables for form fields
-  const [formData, setFormData] = useState({ username: '', email: '', password: '' });
+const RegistrationForm = () => {
+  // State for form fields
+  const [formData, setFormData] = useState({
+    username: '', // Matches `value={username}`
+    email: '',    // Matches `value={email}`
+    password: '', // Matches `value={password}`
+  });
+
   const [errors, setErrors] = useState('');
 
-  // Handle input change
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target; // Correctly destructure `name` and `value`
-    setFormData((prevState) => ({ ...prevState, [name]: value })); // Update state using the name as the key
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value, // Dynamically update the appropriate field in formData
+    }));
   };
 
   // Handle form submission
@@ -21,10 +29,20 @@ const UseForm = () => {
       return;
     }
 
-    // Clear errors if any
+    // Clear errors and log the form data
     setErrors('');
-    console.log(formData);
+    console.log('Form submitted successfully:', formData);
+
+    // Reset form
+    setFormData({
+      username: '',
+      email: '',
+      password: '',
+    });
   };
+
+  // Destructure form fields for easier usage
+  const { username, email, password } = formData;
 
   return (
     <form onSubmit={handleSubmit}>
@@ -33,24 +51,24 @@ const UseForm = () => {
       <label htmlFor="username">Name</label>
       <input
         type="text"
-        name="username" // Match the key in the state
-        value={formData.username} // Bind to state
+        name="username" // Must match the key in the state
+        value={username} // Explicitly destructured value
         onChange={handleChange} // Update state on change
       />
 
       <label htmlFor="email">Email</label>
       <input
         type="email"
-        name="email" // Match the key in the state
-        value={formData.email} // Bind to state
+        name="email" // Must match the key in the state
+        value={email} // Explicitly destructured value
         onChange={handleChange} // Update state on change
       />
 
       <label htmlFor="password">Password</label>
       <input
-        type="password" // Changed to `password` for better user experience
-        name="password" // Match the key in the state
-        value={formData.password} // Bind to state
+        type="password"
+        name="password" // Must match the key in the state
+        value={password} // Explicitly destructured value
         onChange={handleChange} // Update state on change
       />
 
@@ -59,4 +77,4 @@ const UseForm = () => {
   );
 };
 
-export default UseForm;
+export default RegistrationForm;
