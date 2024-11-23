@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 // define the fetch function that can be used to fetch data from API
-const fetchData = async () =>{
+const fetchPosts = async () =>{
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     if (!res.ok){
         throw new Error("Network respose was not ok");
@@ -11,11 +11,11 @@ const fetchData = async () =>{
 };
 const PostsComponent = () => {
     // use the query hook to handle data fetching and caching
-    const {data, error, isloading} = useQuery('fetchData', fetchData);
+    const {data, isError, isLoading} = useQuery('fetchPosts', fetchPosts);
     // handle loading state
-    if (isloading) return <div>Loading...</div>
+    if (isLoading) return <div>Loading...</div>
     // handle error state
-    if (error) return <div>Error loading: {error.message}</div>
+    if (isError) return <div>Error loading: {isError.message}</div>
     // Ensure data is an array before mapping
     if (!Array.isArray(data)) {
         return <div>No data available</div>;
