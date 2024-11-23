@@ -12,6 +12,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<div>Welcome to the App</div>} />
         <Route 
           path="/profile/*" 
           element={
