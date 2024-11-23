@@ -6,7 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import './App.css'
 
 function App() {
-  const isAuthenticated = false; // Simulate authentication status
+  const useAuth = false; // Simulate authentication status
   
 
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route 
           path="/profile/*" 
           element={
-            <ProtectedRoute isAuthenticated={isAuthenticated}>
+            <ProtectedRoute isAuthenticated={useAuth}>
               <Profile />
             </ProtectedRoute>
           } 
