@@ -21,7 +21,7 @@ function HomePage (){
         
     }, []);
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <h1 className="text-blue-700 text-center font-bold pb-3">Recipe list</h1>
             {
                 recipes.map((recipe)=> (
