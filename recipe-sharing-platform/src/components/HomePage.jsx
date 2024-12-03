@@ -25,7 +25,7 @@ function HomePage (){
             <h1 className="text-blue-700 text-center font-bold pb-3">Recipe list</h1>
             {
                 recipes.map((recipe)=> (
-                    <div key={recipe.id} className="bg-pink-200 pt-3">
+                    <div key={recipe.id} className="bg-pink-200 pt-3 hover:shadow-md">
                         <img src={recipe.image} className="mx-auto rounded-full h-40 w-40 sm:h-24 sm:w-24 md:h-50 md:w-50 hover:scale-110 transition-transform ease-in-out" alt="Image"/>
                         <p className="text-black font-bold decoration-2">{recipe.title}</p>
                         <p className="pb-3 font-semibold">{recipe.summary}</p>
