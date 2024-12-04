@@ -21,18 +21,21 @@ function HomePage (){
         
     }, []);
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <h1 className="text-blue-700 text-center font-bold pb-3">Recipe list</h1>
-            {
-                recipes.map((recipe)=> (
-                    <div key={recipe.id} className="bg-pink-200 pt-3  hover:shadow-md">
-                        <img src={recipe.image} className="mx-auto rounded-full h-40 w-40 sm:h-24 sm:w-24 md:h-50 md:w-50 hover:scale-110 transition-transform ease-in-out" alt="Image"/>
-                        <p className="text-black font-bold decoration-2">{recipe.title}</p>
-                        <p className="pb-3 font-semibold">{recipe.summary}</p>
-                    </div>
-                )
-                )
-            }
+        <div >
+            <h1 className="text-blue-700 sm:text-center md:text-center lg:text-center xl:text-center font-bold pb-3">Recipe list</h1>
+            <div className="space-x-2 space-y-2 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {
+                    recipes.map((recipe)=> (
+                        <div key={recipe.id} className="bg-pink-200 hover:shadow-lg">
+                            <img src={recipe.image} className="mx-auto pt-2 rounded-full h-36 w-36 sm:h-24 sm:w-24 md:h-40 md:w-40 hover:scale-110 transition-transform ease-in-out" alt="Image"/>
+                            <p className="text-black font-bold decoration-2">{recipe.title}</p>
+                            <p className="pb-3 font-semibold">{recipe.summary}</p>
+                        </div>
+                    )
+                    )
+                }
+            </div>
+            
         </div>
     )
 
