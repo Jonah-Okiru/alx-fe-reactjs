@@ -31,17 +31,17 @@ function RecipeDetail(){
         return <p>Loading...</p>
     }
     return (
-        <div>
-            <h1>{recipe.name}</h1>
-            <img src={recipe.image} alt={recipe.name} />
-            <h2>Ingredients</h2>
-            <ul>
+        <div className='bg-green-300 content-center hover:shadow-lg'>
+            <h1 className='text-black font-bold'>{recipe.name}</h1>
+            <img src={recipe.image} className='rounded-full mx-auto' alt={recipe.name} />
+            <h2 className='text-black font-semibold'>Ingredients</h2>
+            <ul className='text-black font-semibold'>
                 {recipe.ingredients.map((ingredients, index) => (
                     <li key={index}>{ingredients}</li>
                 ))}
             </ul>
-            <h2>Instructions</h2>
-            <p>{recipe.instructions}</p>
+            <h2 className='text-black font-semibold'>Instructions</h2>
+            <p className='text-black font-semibold'>{recipe.instructions}</p>
         </div>
     );
 };
