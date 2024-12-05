@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import RecipeDetail from "./RecipeDetail";
 function HomePage (){
     // set the initial state of the data
     const [recipes, setRecipes] = useState([]);
@@ -30,6 +32,7 @@ function HomePage (){
                             <img src={recipe.image} className="mx-auto pt-2 rounded-full h-36 w-36 sm:h-24 sm:w-24 md:h-40 md:w-40 hover:scale-110 transition-transform ease-in-out" alt="Image"/>
                             <p className="text-black font-bold decoration-2">{recipe.title}</p>
                             <p className="pb-3 font-semibold">{recipe.summary}</p>
+                            <Link to={`recipe/${recipe.id}`}>Recipe Detail</Link>
                         </div>
                     )
                     )
