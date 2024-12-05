@@ -12,7 +12,7 @@ function RecipeDetail(){
                 const data = await response.json();
                 const foundRecipe = data.recipes.find((recipe) => recipe.id === parseInt(recipeId, 10));
                 if (foundRecipe) {
-                    setRecipe(fetchRecipe);
+                    setRecipe(foundRecipe);
                 } else {
                     setError ('Recipe not found');
                 }

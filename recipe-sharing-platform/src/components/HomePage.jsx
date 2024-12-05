@@ -33,6 +33,7 @@ function HomePage (){
                             <p className="text-black font-bold decoration-2">{recipe.title}</p>
                             <p className="pb-3 font-semibold">{recipe.summary}</p>
                             <Link to={`recipe/${recipe.id}`}>Recipe Detail</Link>
+                            <Link to={"recipeform/"}>Add Recipe</Link>
                         </div>
                     )
                     )
