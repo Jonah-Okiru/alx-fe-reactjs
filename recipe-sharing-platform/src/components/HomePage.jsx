@@ -32,8 +32,19 @@ function HomePage (){
                             <img src={recipe.image} className="mx-auto pt-2 rounded-full h-36 w-36 sm:h-24 sm:w-24 md:h-40 md:w-40 hover:scale-110 transition-transform ease-in-out" alt="Image"/>
                             <p className="text-black font-bold decoration-2">{recipe.title}</p>
                             <p className="pb-3 font-semibold">{recipe.summary}</p>
-                            <Link to={`recipe/${recipe.id}`}>Recipe Detail</Link>
-                            <Link to={"recipeform/"}>Add Recipe</Link>
+                            <div className="space-x-2 justify-center">
+                                <div>
+                                    <Link to={`recipe/${recipe.id}`}>Recipe Detail</Link>
+                                </div>
+                                <div>
+                                    <Link to={"recipeform/"}>Add Recipe</Link>
+
+                                </div>
+                                
+                                
+
+                            </div>
+                            
                         </div>
                     )
                     )
