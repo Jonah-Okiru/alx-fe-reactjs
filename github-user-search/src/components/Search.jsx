@@ -45,7 +45,7 @@ const Search = () => {
 
       const response = await fetch(`https://api.github.com/search/users?${searchQuery}&page=${currentPage}&per_page=10`);
       if (!response.ok) {
-        throw new Error('Failed to fetch users');
+        throw new Error('Looks like we cant find the user');
       }
       const data = await response.json();
 
@@ -79,7 +79,7 @@ const Search = () => {
             id="query"
             name="query"
             value={query}
-            onChange={handleInputChange}
+            onChange={(e) => setQuery(e.target.value)}
             placeholder="Search by username"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
@@ -93,7 +93,7 @@ const Search = () => {
             id="location"
             name="location"
             value={location}
-            onChange={handleInputChange}
+            onChange={(e) => setLocation(e.target.value)}
             placeholder="Filter by location"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
@@ -107,7 +107,7 @@ const Search = () => {
             id="minRepos"
             name="minRepos"
             value={minRepos}
-            onChange={handleInputChange}
+            onChange={(e) => setMinRepos(e.target.value)}
             placeholder="Minimum repositories count"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
