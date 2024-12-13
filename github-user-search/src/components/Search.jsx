@@ -27,10 +27,10 @@ const Search = () => {
     setResults([]);
     setPage(1);
     setHasMore(true);
-    await fetchUsers(1);
+    await fetchUserData(1);
   };
 
-  const fetchUsers = async (currentPage) => {
+  const fetchUserData = async (currentPage) => {
     setLoading(true);
     setError(null);
 
@@ -62,7 +62,7 @@ const Search = () => {
     if (hasMore) {
       const nextPage = page + 1;
       setPage(nextPage);
-      fetchUsers(nextPage);
+      fetchUserData(nextPage);
     }
   };
 
