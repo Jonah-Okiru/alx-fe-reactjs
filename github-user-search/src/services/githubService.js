@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = 'https://api.github.com/users/users?q';
+const BASE_URL = "https://api.github.com/search/users?q";
 /**
  * Fetch user data from GitHub API.
  * @param {string} params -the search parameters
